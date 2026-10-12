@@ -582,3 +582,9 @@ body:has(.hero) .bar::before{opacity:1;background:
   radial-gradient(110px 24px at 63% 62%,rgba(255,255,255,.36),transparent 70%),
   linear-gradient(104deg,transparent 36%,rgba(255,255,255,.5) 46%,rgba(170,215,255,.38) 50%,rgba(255,190,220,.32) 54%,transparent 64%);
  background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat}
+
+/* home top bar: dark text and logo so they contrast with the light image */
+body:has(.hero) .bar .links a.top,body:has(.hero) .bar .menu-btn,body:has(.hero) .bar .links a{color:#14110d}
+body:has(.hero) .bar .links .sep,body:has(.hero) .bar .links span{color:rgba(20,17,13,.35)}
+body:has(.hero) .bar .brand img{filter:brightness(0)}
+body:has(.hero) .bar .menu-btn{border-color:rgba(20,17,13,.45)}
