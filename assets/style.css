@@ -520,14 +520,14 @@ body:has(.proj-bg){background:transparent}
 
 /* projects bottom bar: glass layer extends past the screen edge so a forced overscroll never shows it cut off */
 body:has(.proj-bg) footer{background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
-body:has(.proj-bg) footer::before{content:"";position:fixed;left:0;right:0;bottom:-400px;height:calc(var(--bar-h) + 400px);z-index:-1;pointer-events:none;
+body:has(.proj-bg) footer::before{content:"";position:fixed;left:0;right:0;bottom:-1200px;height:calc(var(--bar-h) + 1200px);z-index:-1;pointer-events:none;
  background:linear-gradient(0deg,rgba(255,255,255,.04),rgba(255,255,255,0) 60%),rgba(46,32,23,.16);
  -webkit-backdrop-filter:blur(6px) saturate(1.35) brightness(.58);backdrop-filter:blur(6px) saturate(1.35) brightness(.58)}
 body:has(.proj-bg) footer .foot-in{position:relative;z-index:1}
 
 /* top bar: glass layer extends past the top edge so a forced overscroll never shows it cut off */
 .bar{background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
-.bar-ext{position:fixed;left:0;right:0;top:-400px;height:calc(var(--bar-h) + 400px);z-index:-1;pointer-events:none;
+.bar-ext{position:fixed;left:0;right:0;top:-1200px;height:calc(var(--bar-h) + 1200px);z-index:-1;pointer-events:none;
  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 60%),rgba(8,7,6,.15);
  -webkit-backdrop-filter:blur(12px) saturate(1.6) brightness(.78);backdrop-filter:blur(12px) saturate(1.6) brightness(.78)}
 body:has(.proj-bg) .bar{background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
@@ -536,6 +536,6 @@ body:has(.proj-bg) .bar-ext{
  -webkit-backdrop-filter:blur(6px) saturate(1.35) brightness(.58);backdrop-filter:blur(6px) saturate(1.35) brightness(.58)}
 
 /* projects: background images fill the whole extended layer (bars + overscroll), video keeps its full frame */
-.proj-bg{inset:-400px 0}
+.proj-bg{inset:-1200px 0}
 .proj-bg i{inset:0}
-.proj-bg i.vid{inset:400px 0}
+.proj-bg i.vid{inset:1200px 0}
