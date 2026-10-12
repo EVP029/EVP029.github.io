@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velvet · E V P</title>
+<meta name="description" content="Portfolio of Emilio Velázquez Puente: artist and animator student.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="index.html" aria-label="Home"><img src="assets/img/signature.png" alt="E V P signature" width="33" height="42"></a>
+  <nav class="links" aria-label="Pages"><a class="top" aria-current="page" href="projects.html">Projects</a><span class="sep" aria-hidden="true"></span><a class="top" href="art.html">Art</a><span class="sep" aria-hidden="true"></span><a class="top" href="about.html">About me</a></nav>
+  <div class="menu">
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-panel">Menu <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+    <nav class="panel" id="menu-panel" aria-label="Pages" hidden><div><h2>Projects</h2><ul><li><a href="mecha-paws.html">Mecha-Paws</a></li><li><a href="velvet.html" aria-current="page">Velvet</a></li><li><a href="short-film.html">Short film</a></li><li><a href="noctu.html">Noctu</a></li></ul></div><div><h2>Art</h2><ul><li><a href="art.html">Art</a></li></ul></div><div><h2>About me</h2><ul><li><a href="about.html">About me</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+  </div>
+</div></header>
+<main class="wrap page">
+  <a class="back" href="projects.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg><span>Projects</span></a><div class="banner page-banner" style="background-image:url(assets/img/velvet-banner.webp);background-position:center 50%"><div class="grain" aria-hidden="true"></div><div class="banner-in"><p class="label">Team game · In development</p><h1>Velvet</h1></div></div>
+  <div class="intro">
+    <div>
+      <p>A game made by a team of five in Unity, planned for release on Steam in late 2026.</p>
+      <p>I work as the render artist and implement the art in Unity: characters, rigs and animation.</p>
+      <p class="todo" style="margin-top:16px">Steam page: coming soon.</p>
+    </div>
+    <ul class="facts"><li><b>Role</b><span>Render artist and Unity implementation</span></li><li><b>Work</b><span>Characters, rigs, animation</span></li><li><b>Engine</b><span>Unity</span></li><li><b>Team</b><span>5 people</span></li><li><b>Status</b><span>In development</span></li><li><b>Release</b><span>Steam, late 2026</span></li></ul>
+  </div>
+  <section class="block"><h2>Characters</h2>
+    <p class="todo" style="margin:-4px 0 18px">Working names. Final art, no background.</p>
+    <div class="grid g2 chars">
+      <figure class="char"><div class="char-img"><img src="assets/img/velvet-cyclops.webp" alt="Cyclops, boss character: a one-eyed ram creature in a wool coat" loading="lazy"></div><figcaption>Cyclops<span>Boss</span></figcaption></figure>
+      <figure class="char"><div class="char-img"><img src="assets/img/velvet-fox.webp" alt="Fox, playable character: a fox in a red hooded cape" loading="lazy"></div><figcaption>Fox<span>Placeholder, subject to change</span></figcaption></figure>
+    </div></section>
+  <section class="block"><h2>Rig and weights</h2>
+    <p class="todo" style="margin:-4px 0 18px">2D skeletal rigs in Unity's Skinning Editor: bones, mesh and auto weights.</p>
+    <div class="grid g2">
+      <figure class="shot"><img src="assets/img/velvet-rig-cyclops.webp" alt="Cyclops rig in Unity's Skinning Editor" loading="lazy" width="1860" height="1570"><figcaption>Cyclops</figcaption></figure>
+      <figure class="shot"><img src="assets/img/velvet-rig-fox.webp" alt="Fox rig in Unity's Skinning Editor" loading="lazy" width="1850" height="1562"><figcaption>Fox</figcaption></figure>
+    </div></section>
+  <section class="block"><h2>Animation in Unity</h2>
+    <p class="todo" style="margin:-4px 0 18px">Animation clips with their keyframes, recorded in the editor.</p>
+    <div class="grid g2 wideclips">
+      <figure class="clip uclip"><video src="assets/video/velvet-cyclops-idle-a.mp4" poster="assets/video/velvet-cyclops-idle-a.webp" autoplay loop muted playsinline preload="metadata" aria-label="Cyclops, idle A animation"></video><figcaption>Cyclops, idle A</figcaption></figure><figure class="clip uclip"><video src="assets/video/velvet-cyclops-idle-b.mp4" poster="assets/video/velvet-cyclops-idle-b.webp" autoplay loop muted playsinline preload="metadata" aria-label="Cyclops, idle B animation"></video><figcaption>Cyclops, idle B</figcaption></figure>
+    </div>
+    <div class="grid g3 wideclips" style="margin-top:16px">
+      <figure class="clip uclip"><video src="assets/video/velvet-fox-idle.mp4" poster="assets/video/velvet-fox-idle.webp" autoplay loop muted playsinline preload="metadata" aria-label="Fox, idle animation"></video><figcaption>Fox, idle</figcaption></figure><figure class="clip uclip"><video src="assets/video/velvet-fox-walk.mp4" poster="assets/video/velvet-fox-walk.webp" autoplay loop muted playsinline preload="metadata" aria-label="Fox, walk animation"></video><figcaption>Fox, walk</figcaption></figure><figure class="clip uclip"><video src="assets/video/velvet-fox-dash.mp4" poster="assets/video/velvet-fox-dash.webp" autoplay loop muted playsinline preload="metadata" aria-label="Fox, dash animation"></video><figcaption>Fox, dash</figcaption></figure>
+    </div></section>
+</main>
+<footer><div class="wrap foot-in"><span>E V P · Artist &amp; Animator Student · Mexico City</span></div></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
