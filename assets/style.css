@@ -623,3 +623,11 @@ body:has(.hero) .bar-ext::before{
 @keyframes glowB{0%{background-position:100% 20%;opacity:.7}40%{opacity:.2}75%{opacity:.65}100%{background-position:0% 90%;opacity:.35}}
 @keyframes glowC{0%{background-position:30% 100%;opacity:.25}50%{opacity:.7}100%{background-position:90% 0%;opacity:.3}}
 @media(prefers-reduced-motion:reduce){body:has(.hero) .bar::before,body:has(.hero) .bar-in::before,body:has(.hero) .bar-ext::before{animation:none}}
+
+/* home top bar: hard gold glint that travels only along the bottom edge, every 9 s */
+body:has(.hero) .bar-ext::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;pointer-events:none;
+ background:linear-gradient(104deg,transparent 42%,rgba(190,125,25,.9) 47%,rgba(255,236,160,1) 50%,rgba(210,145,35,.9) 53%,transparent 58%) no-repeat;
+ background-size:280% 100%;background-position:130% 0;filter:drop-shadow(0 0 3px rgba(255,205,90,.9));
+ animation:edgeGlint 9s ease-in-out infinite}
+@keyframes edgeGlint{0%{background-position:130% 0}70%,100%{background-position:-30% 0}}
+@media(prefers-reduced-motion:reduce){body:has(.hero) .bar-ext::after{animation:none;opacity:0}}
