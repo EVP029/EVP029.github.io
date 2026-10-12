@@ -536,6 +536,43 @@ body:has(.proj-bg) .bar-ext{
  -webkit-backdrop-filter:blur(6px) saturate(1.35) brightness(.58);backdrop-filter:blur(6px) saturate(1.35) brightness(.58)}
 
 /* projects: background images fill the whole extended layer (bars + overscroll), video keeps its full frame */
-.proj-bg{inset:-1200px 0}
+.proj-bg{inset:0}
 .proj-bg i{inset:0}
-.proj-bg i.vid{inset:1200px 0}
+.proj-bg i.vid{inset:0}
+
+
+/* projects: everything fits in one screen, no page scroll, no elastic overscroll (this page only) */
+html:has(.proj-bg),body:has(.proj-bg){height:100%;overflow:hidden;overscroll-behavior:none}
+body:has(.proj-bg){display:flex;flex-direction:column;height:100dvh}
+body:has(.proj-bg) .bar,body:has(.proj-bg) footer{flex:none}
+body:has(.proj-bg) main.page{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:none;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(8px,2vh,24px)}
+body:has(.proj-bg) main.page h1{font-size:clamp(2.2rem,10vh,5rem);line-height:.95;margin-block:.15em .1em}
+body:has(.proj-bg) .hub{margin-top:clamp(10px,2.4vh,26px);gap:14px;flex:none}
+body:has(.proj-bg) .hub-card{min-height:clamp(92px,16vh,150px);padding:clamp(14px,2.2vh,24px) 24px}
+body:has(.proj-bg) .hub-card .hc-t{font-size:clamp(1.5rem,4.4vh,2.3rem);line-height:1}
+body:has(.proj-bg) .hub-card .hc-d{font-size:clamp(.82rem,1.8vh,.95rem);line-height:1.4}
+@media(max-width:600px){body:has(.proj-bg) .hub{gap:10px}body:has(.proj-bg) .hub-card{min-height:clamp(70px,10.5vh,110px);padding:12px 18px;gap:4px}body:has(.proj-bg) main.page h1{font-size:clamp(2rem,7vh,3.4rem)}}
+body:has(.proj-bg) main.page{width:100%;box-sizing:border-box}
+
+/* projects: page no longer scrolls, so the background is viewport-sized again (closer to the artwork, no gaps) */
+.proj-bg{inset:0}
+.proj-bg i,.proj-bg i.vid{inset:0}
+
+/* home: top bar fully transparent (no tint), keeps the glass rim and light blur */
+body:has(.hero) .bar-ext{background:none;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px)}
+
+/* home top bar: light distortion (refracting edge lens, colour fringe, slow drifting sheen) */
+body:has(.hero) .bar{
+ box-shadow:inset 0 -1px 0 rgba(255,150,190,.38),inset 0 -2px 0 rgba(130,205,255,.34),inset 0 -10px 14px -10px rgba(255,255,255,.35),inset 0 1px 0 rgba(255,255,255,.22),0 6px 22px rgba(30,25,15,.12)}
+body:has(.hero) .bar::before{display:block;border-radius:0;
+ background:
+  radial-gradient(60px 26px at 18% 38%,rgba(255,255,255,.34),transparent 70%),
+  radial-gradient(90px 22px at 63% 62%,rgba(255,255,255,.22),transparent 70%),
+  linear-gradient(104deg,transparent 38%,rgba(255,255,255,.30) 47%,rgba(190,225,255,.22) 50%,rgba(255,200,225,.18) 53%,transparent 62%);
+ background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat;
+ mix-blend-mode:soft-light;opacity:.95;animation:glassSheen 9s ease-in-out infinite alternate}
+@keyframes glassSheen{0%{background-position:0 0,0 0,140% 0}100%{background-position:6px 2px,-8px -2px,-40% 0}}
+body:has(.hero) .bar-in::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;pointer-events:none;
+ -webkit-backdrop-filter:blur(10px) saturate(1.6) brightness(1.1);backdrop-filter:blur(10px) saturate(1.6) brightness(1.1);
+ -webkit-mask-image:linear-gradient(0deg,#000,transparent);mask-image:linear-gradient(0deg,#000,transparent)}
+@media(prefers-reduced-motion:reduce){body:has(.hero) .bar::before{animation:none}}
