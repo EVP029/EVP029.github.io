@@ -512,3 +512,8 @@ html:has(.proj-bg){background:#140d09}
 .proj-bg .grain{inset:-60px}
 body:has(.proj-bg){background:transparent}
 .proj-bg i{inset:260px 0}
+
+/* video slot: full frame, no zoom or drift */
+.proj-bg i.vid{animation-name:pbgv}
+@keyframes pbgv{0%{opacity:0}3%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+.proj-bg i.vid video{object-fit:cover}

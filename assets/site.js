@@ -93,3 +93,19 @@
     window.scrollTo({ top: 0, behavior: rm ? 'auto' : 'smooth' });
   });
 })();
+
+// Projects background: play the video from its start each time its slot comes up, and keep it playing.
+(function () {
+  var slot = document.querySelector('.proj-bg i.vid');
+  if (!slot) return;
+  var v = slot.querySelector('video');
+  if (!v) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { v.pause(); v.removeAttribute('autoplay'); return; }
+  function play() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  v.muted = true;
+  play();
+  slot.addEventListener('animationiteration', function () { try { v.currentTime = 0; } catch (e) {} play(); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) play(); });
+  ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (ev) { window.addEventListener(ev, play, { once: true, passive: true }); });
+})();
