@@ -659,3 +659,13 @@ body:has(.hero) .panel a,body:has(.hero) .panel h2{color:#14110d}
 body:has(.hero) .panel a:hover,body:has(.hero) .panel a[aria-current="page"]{color:#6b4a12}
 body:has(.hero) .panel-3 a{border-bottom-color:rgba(20,17,13,.22)}
 @media(prefers-reduced-motion:reduce){body:has(.hero) .panel::before,body:has(.hero) .panel::after{animation:none}}
+
+/* game page: video player, credits, text links; fifth project card spans the row */
+.player{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0d0c0b}
+.player video{display:block;width:100%;height:auto;aspect-ratio:16/10;background:#000}
+.credits{margin:0 0 10px}
+.credit-list{margin:0;padding-left:18px;display:grid;gap:6px}
+.textlink{color:var(--sand);text-underline-offset:4px}
+.textlink:hover{color:#fff}
+@media(min-width:601px){.hub .hub-card:last-child:nth-child(odd){grid-column:1/-1}}
+@media(max-width:600px){body:has(.proj-bg) .hub-card{min-height:clamp(60px,9vh,100px);padding:10px 18px}body:has(.proj-bg) .hub-card .hc-t{font-size:clamp(1.3rem,3.6vh,1.9rem)}body:has(.proj-bg) .hub-card .hc-d{font-size:.8rem;line-height:1.3}}
