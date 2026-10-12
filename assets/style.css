@@ -598,3 +598,28 @@ body:has(.hero) .bar::before{background:
 
 /* home top bar: darker separators between the links */
 body:has(.hero) .bar .links .sep{width:1px;background:linear-gradient(180deg,transparent,rgba(20,17,13,.85),transparent)}
+
+/* home top bar: gold sheen softer and more diffused */
+body:has(.hero) .bar::before{filter:blur(9px);opacity:.75;background:
+  radial-gradient(110px 34px at 18% 38%,rgba(255,214,110,.28),transparent 75%),
+  radial-gradient(150px 30px at 63% 62%,rgba(196,134,30,.2),transparent 75%),
+  linear-gradient(104deg,transparent 28%,rgba(255,206,92,.3) 44%,rgba(176,116,22,.24) 54%,transparent 72%);
+ background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat}
+
+/* home top bar: gold glow over the whole bar, soft random-feeling shimmer (three layers, different speeds) */
+body:has(.hero) .bar::before,body:has(.hero) .bar-in::before,body:has(.hero) .bar-ext::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:0;filter:blur(10px);background-repeat:no-repeat;background-size:190% 160%;opacity:.5}
+body:has(.hero) .bar-in::before{z-index:-1}
+body:has(.hero) .bar-ext::before{z-index:0}
+body:has(.hero) .bar::before{
+ background-image:radial-gradient(300px 60px at 20% 40%,rgba(255,212,100,.55),transparent 70%),radial-gradient(380px 70px at 70% 65%,rgba(190,128,28,.38),transparent 70%),radial-gradient(240px 50px at 95% 25%,rgba(255,224,130,.4),transparent 70%);
+ animation:glowA 11s ease-in-out infinite alternate}
+body:has(.hero) .bar-in::before{
+ background-image:radial-gradient(340px 64px at 45% 55%,rgba(236,178,60,.5),transparent 70%),radial-gradient(260px 56px at 8% 70%,rgba(170,112,24,.34),transparent 70%),radial-gradient(320px 60px at 82% 35%,rgba(255,216,110,.42),transparent 70%);
+ animation:glowB 17s ease-in-out -6s infinite alternate}
+body:has(.hero) .bar-ext::before{
+ background-image:radial-gradient(420px 80px at 60% 45%,rgba(255,205,90,.4),transparent 70%),radial-gradient(300px 60px at 12% 30%,rgba(200,140,34,.3),transparent 70%);
+ animation:glowC 23s ease-in-out -13s infinite alternate}
+@keyframes glowA{0%{background-position:0% 0%;opacity:.15}35%{opacity:.75}70%{opacity:.3}100%{background-position:100% 100%;opacity:.6}}
+@keyframes glowB{0%{background-position:100% 20%;opacity:.7}40%{opacity:.2}75%{opacity:.65}100%{background-position:0% 90%;opacity:.35}}
+@keyframes glowC{0%{background-position:30% 100%;opacity:.25}50%{opacity:.7}100%{background-position:90% 0%;opacity:.3}}
+@media(prefers-reduced-motion:reduce){body:has(.hero) .bar::before,body:has(.hero) .bar-in::before,body:has(.hero) .bar-ext::before{animation:none}}
