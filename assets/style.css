@@ -416,3 +416,12 @@ footer .social a{width:36px;height:36px;color:var(--taupe)}footer .social a:hove
 .skills th:first-child{padding-right:64px}
 .skills td{padding-right:40px}
 @media(max-width:700px){.skills th:first-child,.skills td{padding-right:0}}
+.skills th:first-child{padding-right:130px}
+.skills td{padding-right:70px}
+@media(max-width:1100px){.skills th:first-child{padding-right:80px}.skills td{padding-right:40px}}
+@media(max-width:700px){.skills th:first-child,.skills td{padding-right:0}}
+/* more room between Area and Skills only */
+.skills th:first-child{padding-right:170px}
+.skills td{padding-right:36px}
+@media(max-width:1100px){.skills th:first-child{padding-right:100px}}
+@media(max-width:700px){.skills th:first-child,.skills td{padding-right:0}}
