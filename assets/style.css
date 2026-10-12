@@ -588,3 +588,10 @@ body:has(.hero) .bar .links a.top,body:has(.hero) .bar .menu-btn,body:has(.hero)
 body:has(.hero) .bar .links .sep,body:has(.hero) .bar .links span{color:rgba(20,17,13,.35)}
 body:has(.hero) .bar .brand img{filter:brightness(0)}
 body:has(.hero) .bar .menu-btn{border-color:rgba(20,17,13,.45)}
+
+/* home top bar: drifting sheen in gold and darker gold */
+body:has(.hero) .bar::before{background:
+  radial-gradient(70px 28px at 18% 38%,rgba(255,214,110,.5),transparent 70%),
+  radial-gradient(110px 24px at 63% 62%,rgba(196,134,30,.34),transparent 70%),
+  linear-gradient(104deg,transparent 36%,rgba(255,206,92,.52) 46%,rgba(176,116,22,.42) 52%,transparent 64%);
+ background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat}
