@@ -396,3 +396,20 @@ footer .social a{width:36px;height:36px;color:var(--taupe)}footer .social a:hove
 .panel-3{gap:0;padding:8px 24px;width:min(88vw,260px)}
 .panel-3 a{padding:14px 0;font-size:1.5rem;border-bottom:1px solid rgba(255,255,255,.14)}
 .panel-3 a:last-child{border-bottom:0}
+
+/* skills and tools table */
+.skills{width:100%;border-collapse:collapse;font-size:.95rem;line-height:1.45}
+.skills th,.skills td{text-align:left;vertical-align:top;padding:14px 18px 14px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.skills thead th{font-family:var(--body);font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);padding-top:0;border-bottom-color:rgba(255,255,255,.4)}
+.skills tbody th{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1.05rem;white-space:nowrap;width:1%}
+.skills td:nth-child(2){width:40%}
+@media(max-width:700px){
+  .skills,.skills tbody,.skills tr,.skills th,.skills td{display:block;width:auto}
+  .skills thead{display:none}
+  .skills tr{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .skills th,.skills td{border:0;padding:0}
+  .skills tbody th{white-space:normal;font-size:1.15rem;margin-bottom:6px;width:auto}
+  .skills td{margin-top:4px;display:grid;grid-template-columns:62px 1fr;gap:8px}
+  .skills td::before{content:attr(data-l);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);padding-top:3px}
+  .skills td:nth-child(2){width:auto}
+}

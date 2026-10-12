@@ -10,10 +10,10 @@
 <body>
 <header class="bar"><div class="bar-in">
   <a class="brand" href="index.html" aria-label="Home"><img src="assets/img/signature.png" alt="E V P signature" width="33" height="42"></a>
-  <nav class="links" aria-label="Pages"><a class="top" href="projects.html">Projects</a><span class="sep" aria-hidden="true"></span><a class="top" href="art.html">Art</a><span class="sep" aria-hidden="true"></span><a class="top" aria-current="page" href="about.html">About me</a></nav>
+  <nav class="links" aria-label="Pages"><a class="top" aria-current="page" href="about.html">About me</a><span class="sep" aria-hidden="true"></span><a class="top" href="projects.html">Projects</a><span class="sep" aria-hidden="true"></span><a class="top" href="art.html">Art</a></nav>
   <div class="menu">
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-panel">Menu <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
-    <nav class="panel panel-3" id="menu-panel" aria-label="Pages" hidden><a href="projects.html">Projects</a><a href="art.html">Art</a><a href="about.html" aria-current="page">About me</a></nav>
+    <nav class="panel panel-3" id="menu-panel" aria-label="Pages" hidden><a href="about.html" aria-current="page">About me</a><a href="projects.html">Projects</a><a href="art.html">Art</a></nav>
   </div>
 </div></header>
 <main class="wrap page">
@@ -28,10 +28,20 @@
     </div>
     <figure class="about-art"><img src="assets/img/about-drawing.webp" alt="Anatomy study of a rib cage and pelvis, drawn with white pencil on black board" loading="lazy"></figure>
   </div>
-  <section class="block"><h2>Skills</h2>
-    <ul class="tags"><li>Character design</li><li>Concept art</li><li>2D animation</li><li>Character rigging</li><li>Unity animation</li><li>Visual development</li><li>UX/UI design</li><li>Art direction</li><li>Team leadership</li><li>Traditional drawing and painting</li></ul></section>
-  <section class="block"><h2>Tools</h2>
-    <ul class="tags"><li>Maya</li><li>Unity</li><li>Figma</li><li>Photoshop</li><li>Illustrator</li><li>After Effects</li><li>Procreate</li><li>C#</li><li>Python</li><li>MySQL</li></ul></section>
+  <section class="block"><h2>Skills and tools</h2>
+    <table class="skills">
+      <thead><tr><th>Area</th><th>Skills</th><th>Tools</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">Character and concept art</th><td data-l="Skills">Character design, concept art, visual development</td><td data-l="Tools">Photoshop, Illustrator, Procreate</td></tr>
+      <tr><th scope="row">2D animation</th><td data-l="Skills">Frame-by-frame 2D animation</td><td data-l="Tools">After Effects, Procreate, Photoshop</td></tr>
+      <tr><th scope="row">3D animation and rigging</th><td data-l="Skills">Character rigging, 3D animation</td><td data-l="Tools">Maya</td></tr>
+      <tr><th scope="row">Game development</th><td data-l="Skills">Unity animation and implementation</td><td data-l="Tools">Unity, C#</td></tr>
+      <tr><th scope="row">UX/UI design</th><td data-l="Skills">App design, visual identity, prototyping</td><td data-l="Tools">Figma</td></tr>
+      <tr><th scope="row">Traditional art</th><td data-l="Skills">Drawing and painting</td><td data-l="Tools">Acrylic, oil, watercolor</td></tr>
+      <tr><th scope="row">Programming</th><td data-l="Skills">Scripting and databases</td><td data-l="Tools">C#, Python, MySQL; learning Swift in Xcode</td></tr>
+      <tr><th scope="row">Leadership</th><td data-l="Skills">Art direction, team leadership</td><td data-l="Tools">Art lead at Panteras UP</td></tr>
+      </tbody>
+    </table></section>
   <section class="block"><h2>Languages</h2>
     <ul class="tags"><li>Spanish, native</li><li>English, Cambridge C1</li></ul></section>
   <section class="block"><h2>Certifications</h2>
