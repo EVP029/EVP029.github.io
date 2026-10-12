@@ -669,3 +669,4 @@ body:has(.hero) .panel-3 a{border-bottom-color:rgba(20,17,13,.22)}
 .textlink:hover{color:#fff}
 @media(min-width:601px){.hub .hub-card:last-child:nth-child(odd){grid-column:1/-1}}
 @media(max-width:600px){body:has(.proj-bg) .hub-card{min-height:clamp(60px,9vh,100px);padding:10px 18px}body:has(.proj-bg) .hub-card .hc-t{font-size:clamp(1.3rem,3.6vh,1.9rem)}body:has(.proj-bg) .hub-card .hc-d{font-size:.8rem;line-height:1.3}}
+.hub-card[href="enfys-game.html"] .hc-img{object-position:50% 52%}
