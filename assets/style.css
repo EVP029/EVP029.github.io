@@ -570,9 +570,15 @@ body:has(.hero) .bar::before{display:block;border-radius:0;
   radial-gradient(90px 22px at 63% 62%,rgba(255,255,255,.22),transparent 70%),
   linear-gradient(104deg,transparent 38%,rgba(255,255,255,.30) 47%,rgba(190,225,255,.22) 50%,rgba(255,200,225,.18) 53%,transparent 62%);
  background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat;
- mix-blend-mode:soft-light;opacity:.95;animation:glassSheen 9s ease-in-out infinite alternate}
+ opacity:.8;animation:glassSheen 9s ease-in-out infinite alternate}
 @keyframes glassSheen{0%{background-position:0 0,0 0,140% 0}100%{background-position:6px 2px,-8px -2px,-40% 0}}
 body:has(.hero) .bar-in::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;pointer-events:none;
  -webkit-backdrop-filter:blur(10px) saturate(1.6) brightness(1.1);backdrop-filter:blur(10px) saturate(1.6) brightness(1.1);
  -webkit-mask-image:linear-gradient(0deg,#000,transparent);mask-image:linear-gradient(0deg,#000,transparent)}
 @media(prefers-reduced-motion:reduce){body:has(.hero) .bar::before{animation:none}}
+body:has(.hero) .bar-in::after{height:24px;-webkit-backdrop-filter:blur(14px) saturate(1.9) brightness(1.14);backdrop-filter:blur(14px) saturate(1.9) brightness(1.14)}
+body:has(.hero) .bar::before{opacity:1;background:
+  radial-gradient(70px 28px at 18% 38%,rgba(255,255,255,.5),transparent 70%),
+  radial-gradient(110px 24px at 63% 62%,rgba(255,255,255,.36),transparent 70%),
+  linear-gradient(104deg,transparent 36%,rgba(255,255,255,.5) 46%,rgba(170,215,255,.38) 50%,rgba(255,190,220,.32) 54%,transparent 64%);
+ background-size:100% 100%,100% 100%,260% 100%;background-position:0 0,0 0,140% 0;background-repeat:no-repeat}
