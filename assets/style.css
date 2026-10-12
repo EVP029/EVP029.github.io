@@ -496,3 +496,11 @@ body:has(.proj-bg) footer{
 body:has(.proj-bg) footer::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;pointer-events:none;background:linear-gradient(90deg,rgba(150,200,255,0),rgba(150,200,255,.30) 12%,rgba(255,190,170,.14) 30%,rgba(190,235,255,.32) 52%,rgba(255,200,230,.14) 72%,rgba(160,210,255,.28) 90%,rgba(150,200,255,0));filter:blur(.8px)}
 body:has(.proj-bg) footer .foot-in{width:100%}
 body:has(.proj-bg) footer,body:has(.proj-bg) footer .foot-in span{color:rgba(240,232,222,.7)}
+
+/* projects bars v3: less black, warmer and lighter */
+body:has(.proj-bg) .bar{
+ background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 60%),rgba(46,32,23,.16);
+ -webkit-backdrop-filter:blur(6px) saturate(1.35) brightness(.58);backdrop-filter:blur(6px) saturate(1.35) brightness(.58)}
+body:has(.proj-bg) footer{
+ background:linear-gradient(0deg,rgba(255,255,255,.04),rgba(255,255,255,0) 60%),rgba(46,32,23,.16);
+ -webkit-backdrop-filter:blur(6px) saturate(1.35) brightness(.58);backdrop-filter:blur(6px) saturate(1.35) brightness(.58)}
