@@ -631,3 +631,8 @@ body:has(.hero) .bar-ext::after{content:"";position:absolute;left:0;right:0;bott
  animation:edgeGlint 9s ease-in-out infinite}
 @keyframes edgeGlint{0%{background-position:130% 0}70%,100%{background-position:-30% 0}}
 @media(prefers-reduced-motion:reduce){body:has(.hero) .bar-ext::after{animation:none;opacity:0}}
+
+/* edge glint: softer and brighter (no dark ends) */
+body:has(.hero) .bar-ext::after{height:4px;
+ background:linear-gradient(104deg,transparent 34%,rgba(255,214,120,.35) 44%,rgba(255,244,200,.95) 50%,rgba(255,214,120,.35) 56%,transparent 66%) no-repeat;
+ background-size:280% 100%;background-position:130% 0;filter:blur(1.2px) drop-shadow(0 0 6px rgba(255,225,140,.85))}
