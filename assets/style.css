@@ -413,3 +413,6 @@ footer .social a{width:36px;height:36px;color:var(--taupe)}footer .social a:hove
   .skills td::before{content:attr(data-l);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);padding-top:3px}
   .skills td:nth-child(2){width:auto}
 }
+.skills th:first-child{padding-right:64px}
+.skills td{padding-right:40px}
+@media(max-width:700px){.skills th:first-child,.skills td{padding-right:0}}
