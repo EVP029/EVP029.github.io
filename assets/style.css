@@ -676,3 +676,19 @@ body:has(.hero) .panel-3 a{border-bottom-color:rgba(20,17,13,.22)}
 .hub-card:hover::before,.hub-card:focus-visible::before{opacity:.3;animation-play-state:running}
 @media(hover:none){.hub-card::before{opacity:.25;animation-play-state:running}}
 @media(prefers-reduced-motion:reduce){.hub-card::before{animation:none}}
+
+/* touch screens: capsule image and grain only appear when tapped, with a small flash of light where the finger landed */
+@media(hover:none){
+ .hc-img{opacity:0;transform:scale(1.06)}
+ .hub-card::after{opacity:0}
+ .hub-card::before{opacity:0;animation-play-state:paused}
+ .hub-card.tap .hc-img{opacity:1;transform:scale(1)}
+ .hub-card.tap::after{opacity:1}
+ .hub-card.tap::before{opacity:.3;animation-play-state:running}
+ .hub-card.tap .hc-t{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+ .hub-card.tap .hc-d{color:#efe8df}
+}
+.hub-card .flash{position:absolute;left:var(--fx,50%);top:var(--fy,50%);width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;z-index:3;pointer-events:none;
+ background:radial-gradient(circle,rgba(255,244,214,.95) 0,rgba(255,214,120,.55) 35%,rgba(255,214,120,0) 70%);mix-blend-mode:screen;opacity:0;transform:scale(1);animation:tapflash .6s ease-out forwards}
+@keyframes tapflash{0%{opacity:.95;transform:scale(1)}100%{opacity:0;transform:scale(34)}}
+@media(prefers-reduced-motion:reduce){.hub-card .flash{animation:none;opacity:0}}

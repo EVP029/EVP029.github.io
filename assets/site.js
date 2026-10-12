@@ -109,3 +109,30 @@
   document.addEventListener('visibilitychange', function () { if (!document.hidden) play(); });
   ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (ev) { window.addEventListener(ev, play, { once: true, passive: true }); });
 })();
+
+/* touch screens: capsules show their image on tap, with a light flash at the touch point, then open */
+(function () {
+  if (!window.matchMedia || !window.matchMedia('(hover: none)').matches) return;
+  var cards = document.querySelectorAll('.hub-card');
+  if (!cards.length) return;
+  cards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button > 0) return;
+      if (card.classList.contains('tap')) return;
+      e.preventDefault();
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX || r.left + r.width / 2) - r.left;
+      var y = (e.clientY || r.top + r.height / 2) - r.top;
+      card.style.setProperty('--fx', x + 'px');
+      card.style.setProperty('--fy', y + 'px');
+      var f = document.createElement('span'); f.className = 'flash'; f.setAttribute('aria-hidden', 'true');
+      card.appendChild(f);
+      card.classList.add('tap');
+      var href = card.getAttribute('href');
+      setTimeout(function () { window.location.href = href; }, 520);
+    });
+  });
+  window.addEventListener('pageshow', function () {
+    cards.forEach(function (c) { c.classList.remove('tap'); var f = c.querySelector('.flash'); if (f) f.remove(); });
+  });
+})();
